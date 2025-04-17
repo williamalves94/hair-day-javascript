@@ -1,6 +1,13 @@
-export function schedulesDay() {
-    // buscar agendamentos na api para carregar do lado direito da tela
+import { hoursLoad } from "../form/hours-load"
 
-    // os horario disponiveis do lado esquerdo
+// seleciona o input de data
+const selectedDate = document.getElementById("date")
+export function schedulesDay() {
+    // obtem a data do input
+    const date = selectedDate.value
+
+    // renderiza as horas disponiveis
+    hoursLoad({ date })
+
 
 }
